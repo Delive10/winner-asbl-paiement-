@@ -3,7 +3,7 @@
 session_start();
 ?>
 <!DOCTYPE html>
-<html lang="fr"> 
+<html lang="fr">
 
 <head>
     <meta charset="utf-8">
@@ -182,7 +182,7 @@ session_start();
                         <div class="bg-light rounded p-4">
                             <h4 class="mb-4">Formulaire de Don</h4>
                             <form action="paiement.php" method="POST">                  
-                                <div class="row g-3">
+                                <div class="row g-3"> 
                                     <div class="col-md-6">
                                         <div class="form-floating">
                                             <input type="text" class="form-control" id="prenom" name="prenom" placeholder="Votre prénom" required>

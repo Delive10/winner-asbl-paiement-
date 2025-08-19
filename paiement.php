@@ -13,7 +13,7 @@ function logPaymentError($message, $data = []) {
     
     // Créer le dossier logs s'il n'existe pas
     if (!is_dir(__DIR__ . '/logs')) {
-        mkdir(__DIR__ . '/logs', 0777, true); 
+        mkdir(__DIR__ . '/logs', 0777, true);
     }
     
     file_put_contents($logFile, $logMessage, FILE_APPEND);
@@ -35,8 +35,8 @@ $orderid = genRandomID();
 $merchant = "WINNERR";
 $apipassword = "55c071e2c1322dad47f29708981439f5";
 $currency = "USD";
-$returnUrl = "https://winnerasbl.org"; // À adapter à ton domaine
-
+$returnUrl = "https://winnerasbl.org/payment-success.php"; // À adapter à ton domaine
+$returnUrl_annuler = "https://winnerasbl.org/don.php"; // À adapter à ton domaine
 $sessionEndpoint = "https://ap-gateway.mastercard.com/api/rest/version/59/merchant/$merchant/session";
 
 // Création de la session
@@ -104,11 +104,6 @@ if (!$responseData || !isset($responseData->session->id)) {
 
 $sessionId = $responseData->session->id;
 $sessionVersion = $responseData->session->version;
-
-// Ajouter ces en-têtes AVANT toute sortie HTML
-header('Content-Security-Policy: default-src * data: blob: filesystem: about: ws: wss: \'unsafe-inline\' \'unsafe-eval\' \'unsafe-dynamic\'; frame-src * data: blob: \'unsafe-inline\' \'unsafe-eval\'; frame-ancestors \'none\';');
-header('X-Frame-Options: DENY');
-header('X-Content-Type-Options: nosniff');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -220,7 +215,7 @@ header('X-Content-Type-Options: nosniff');
                         </ol>
                     </nav>
                 </div>
-            </div>
+            </div> 
         </div>
 
         <!-- Payment Section -->
@@ -297,16 +292,16 @@ header('X-Content-Type-Options: nosniff');
             });
             
             alert("Erreur de paiement : " + error.explanation);
-            window.location = "<?php echo $returnUrl; ?>";
+            window.location = "<?php echo $returnUrl_annuler; ?>";
         }
 
         function cancelCallback(){
             alert("Paiement annulé.");
-            window.location = "<?php echo $returnUrl; ?>";
+            window.location = "<?php echo $returnUrl_annuler; ?>";
         }
 
         Checkout.configure({
-            session: { 
+            session: {
                 id: '<?php echo $sessionId; ?>',
                 version: '<?php echo $sessionVersion; ?>'
             },

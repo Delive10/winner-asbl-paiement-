@@ -1,0 +1,36 @@
+[2025-08-19 08:55:23] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "https:\/\/winnerasbl.org"
+        },
+        "order": {
+            "id": 7702569,
+            "amount": "1.00",
+            "currency": "USD"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 08:55:25] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002741155631H9812258N89",
+            "updateStatus": "SUCCESS",
+            "version": "a186720401"
+        },
+        "successIndicator": "16c3092029d547fe"
+    }
+}
+----------------------------------------

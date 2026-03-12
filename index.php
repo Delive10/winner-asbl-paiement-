@@ -47,7 +47,7 @@
             <div class="row gx-0">
                 <div class="col-lg-3 bg-dark d-none d-lg-block">
                     <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                        <h1 class="m-0 text-primary  header-logo">Winner ASBL</h1>
+                        <img src="img/winner.png"  alt="winner Logo" class="m-0" style="height: 80px; border-radius: 10px;">
                     </a>
                 </div>
                 <div class="col-lg-9">
@@ -74,7 +74,7 @@
                     </div>
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                         <a href="index.html" class="navbar-brand d-block d-lg-none">
-                            <h1 class="m-0 text-primary  header-logo">Winner ASBL</h1>
+                            <img src="img/winner.png"  alt="winner Logo" class="m-0" style="height: 40px; border-radius: 10px;">
                         </a>
                         <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                             <span class="navbar-toggler-icon"></span>
@@ -108,7 +108,7 @@
                                 <h6 class="section-title text-white text-uppercase mb-3 animated slideInDown">Ensemble pour une Cause Noble</h6>
                                 <h1 class="display-3 text-white mb-4 animated slideInDown">Soutenons les Enfants Atteints d'Hydrocéphalie</h1>
                                 <a href="don.php" class="btn btn-primary py-md-3 px-md-5 me-3 animated slideInLeft">Faire un Don</a>
-                                <a href="about.php#mission" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Notre Mission</a>
+                                <a href="ecole.php" class="btn btn-light py-md-3 px-md-5 animated slideInRight">Notre Ecole</a>
                             </div>
                         </div>
                     </div>
@@ -141,13 +141,8 @@
          
 
   <!-- Logo Section -->
-        <div class="container-xxl py-4 wow fadeInUp" data-wow-delay="0.2s">
-            <div class="container text-center">
-                <img src="img/logo.jpg" alt="ChatMath Entreprise Logo" class="img-fluid" style="max-height: 100px;">
-            </div>
-        </div>
         <!-- About Start -->
-        <div class="container-xxl py-5">
+        <div class="container-xxl py-0">
             <div class="container">
                 <div class="row g-5 align-items-center">
                     <div class="col-lg-6">
@@ -486,7 +481,7 @@
                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/team-1.jpg" alt="">
+                                <img class="img-fluid" src="img/profil.jpeg" alt="">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-whatsapp"></i></a>
@@ -502,7 +497,7 @@
                        <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.1s">
                         <div class="rounded shadow overflow-hidden">
                             <div class="position-relative">
-                                <img class="img-fluid" src="img/merveille.jpg" alt="">
+                                <img class="img-fluid" src="img/merveille2.jpg" alt="">
                                 <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
                                     <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
                                     <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-whatsapp"></i></a>
@@ -512,6 +507,22 @@
                             <div class="text-center p-4 mt-3">
                                 <h5 class="fw-bold mb-0">Merveille Amuri</h5>
                                 <small>Responsable de communication</small>
+                            </div>
+                        </div>
+                    </div>
+                     <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
+                        <div class="rounded shadow overflow-hidden">
+                            <div class="position-relative">
+                                <img class="img-fluid" src="img/fondateur.jpg" alt="">
+                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
+                                    <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-whatsapp"></i></a>
+                                    <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
+                                </div>
+                            </div>
+                            <div class="text-center p-4 mt-3">
+                                <h5 class="fw-bold mb-0">Mankwaka delive</h5>
+                                <small>Responsable Informatique</small>
                             </div>
                         </div>
                     </div>
@@ -563,22 +574,7 @@
                             </div>
                         </div>
                     </div>
-                    <div class="col-lg-3 col-md-6 wow fadeInUp" data-wow-delay="0.7s">
-                        <div class="rounded shadow overflow-hidden">
-                            <div class="position-relative">
-                                <img class="img-fluid" src="img/fondateur.jpg" alt="">
-                                <div class="position-absolute start-50 top-100 translate-middle d-flex align-items-center">
-                                    <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-facebook-f"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-whatsapp"></i></a>
-                                    <a class="btn btn-square btn-primary mx-1" href="#"><i class="fab fa-instagram"></i></a>
-                                </div>
-                            </div>
-                            <div class="text-center p-4 mt-3">
-                                <h5 class="fw-bold mb-0">Mankwaka delive</h5>
-                                <small>Web Master</small>
-                            </div>
-                        </div>
-                    </div>
+                   
                 </div>
             </div>
         </div>

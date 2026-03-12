@@ -142,3 +142,925 @@ Data: {
     }
 }
 ----------------------------------------
+[2025-08-19 10:48:59] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "https:\/\/winnerasbl.org\/payment-success.php"
+        },
+        "order": {
+            "id": 4070798,
+            "amount": "1.00",
+            "currency": "USD"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 10:49:03] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002247592462G0311550K50",
+            "updateStatus": "SUCCESS",
+            "version": "5bfda57901"
+        },
+        "successIndicator": "91d0fefd565c4013"
+    }
+}
+----------------------------------------
+[2025-08-19 10:49:31] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "https:\/\/winnerasbl.org\/"
+        },
+        "order": {
+            "id": 2913199,
+            "amount": "1.00",
+            "currency": "USD"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 10:49:34] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002316313783G0504440M70",
+            "updateStatus": "SUCCESS",
+            "version": "fd5134f301"
+        },
+        "successIndicator": "1286fffbc57f45da"
+    }
+}
+----------------------------------------
+[2025-08-19 10:51:48] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 3466845,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 10:51:51] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002931430715L3671492H58",
+            "updateStatus": "SUCCESS",
+            "version": "fa7fdaa101"
+        },
+        "successIndicator": "aa72979dfb4748b2"
+    }
+}
+----------------------------------------
+[2025-08-19 10:53:15] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 2030560,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 10:53:21] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002477909696F8928070M00",
+            "updateStatus": "SUCCESS",
+            "version": "cc6672ca01"
+        },
+        "successIndicator": "8757246325f84982"
+    }
+}
+----------------------------------------
+[2025-08-19 11:05:07] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 7452731,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:05:11] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002806119619K9239572E56",
+            "updateStatus": "SUCCESS",
+            "version": "49607d4601"
+        },
+        "successIndicator": "41bc74a63f9340fd"
+    }
+}
+----------------------------------------
+[2025-08-19 11:07:29] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 3949761,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:07:33] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002674490327N1927220L26",
+            "updateStatus": "SUCCESS",
+            "version": "1b3fe1d801"
+        },
+        "successIndicator": "933576e8f27040fc"
+    }
+}
+----------------------------------------
+[2025-08-19 11:07:36] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 2996682,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:07:40] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002214898095K3047077G97",
+            "updateStatus": "SUCCESS",
+            "version": "5057ea0601"
+        },
+        "successIndicator": "43e2cf18b8e1440d"
+    }
+}
+----------------------------------------
+[2025-08-19 11:08:17] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 5414062,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:08:21] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002803619742L1632951I51",
+            "updateStatus": "SUCCESS",
+            "version": "8a68795701"
+        },
+        "successIndicator": "66062d9562674b47"
+    }
+}
+----------------------------------------
+[2025-08-19 11:08:51] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 6918207,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:08:55] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002678655878K9170840J17",
+            "updateStatus": "SUCCESS",
+            "version": "5a75a0e801"
+        },
+        "successIndicator": "c9278ab36f124097"
+    }
+}
+----------------------------------------
+[2025-08-19 11:09:43] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 6276156,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:09:46] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002500190987J0409889G55",
+            "updateStatus": "SUCCESS",
+            "version": "f86ce74201"
+        },
+        "successIndicator": "90ef75c2d8334b5e"
+    }
+}
+----------------------------------------
+[2025-08-19 11:10:20] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 4092559,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:10:23] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002734558291N6359582L26",
+            "updateStatus": "SUCCESS",
+            "version": "8cd1e60a01"
+        },
+        "successIndicator": "6a941fd26c90434f"
+    }
+}
+----------------------------------------
+[2025-08-19 11:13:48] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 2083919,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:13:52] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002270257662G7840017G67",
+            "updateStatus": "SUCCESS",
+            "version": "80b9d64101"
+        },
+        "successIndicator": "07495b3ffc4541e5"
+    }
+}
+----------------------------------------
+[2025-08-19 11:14:33] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 5633626,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:14:36] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002206106362K3265749N19",
+            "updateStatus": "SUCCESS",
+            "version": "ecda6a3e01"
+        },
+        "successIndicator": "ac167891d3c54216"
+    }
+}
+----------------------------------------
+[2025-08-19 11:14:54] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 6978483,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:14:57] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002364802598M1695862I32",
+            "updateStatus": "SUCCESS",
+            "version": "0aacbb6f01"
+        },
+        "successIndicator": "10da2d7499fa40fa"
+    }
+}
+----------------------------------------
+[2025-08-19 11:28:57] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 5115082,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:29:01] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002897110388K9564191K12",
+            "updateStatus": "SUCCESS",
+            "version": "8934c47e01"
+        },
+        "successIndicator": "1093320b4cae4a1f"
+    }
+}
+----------------------------------------
+[2025-08-19 11:29:45] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 4741245,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:29:48] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002782783952E4282271L23",
+            "updateStatus": "SUCCESS",
+            "version": "e338f90101"
+        },
+        "successIndicator": "19b23aec0d4947ae"
+    }
+}
+----------------------------------------
+[2025-08-19 11:30:53] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 2695463,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 11:31:02] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002595202541M5254323L67",
+            "updateStatus": "SUCCESS",
+            "version": "36a756e001"
+        },
+        "successIndicator": "61988f2b8c0a4243"
+    }
+}
+----------------------------------------
+[2025-08-19 13:41:46] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 6522776,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 13:41:50] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002772558829H6089594F43",
+            "updateStatus": "SUCCESS",
+            "version": "4e89022d01"
+        },
+        "successIndicator": "5642b09ed8cf4c3c"
+    }
+}
+----------------------------------------
+[2025-08-19 15:13:41] Request to Mastercard API
+Data: {
+    "endpoint": "https:\/\/ap-gateway.mastercard.com\/api\/rest\/version\/59\/merchant\/WINNERR\/session",
+    "data": {
+        "apiOperation": "CREATE_CHECKOUT_SESSION",
+        "interaction": {
+            "operation": "PURCHASE",
+            "returnUrl": "http:\/\/localhost\/payment-success.php?amount=1.00",
+            "merchant": {
+                "name": "Winner ASBL",
+                "address": {
+                    "line1": "Kinshasa",
+                    "line2": "RDC"
+                }
+            },
+            "displayControl": {
+                "billingAddress": "HIDE",
+                "customerEmail": "HIDE",
+                "orderSummary": "SHOW",
+                "shipping": "HIDE"
+            }
+        },
+        "order": {
+            "id": 5863595,
+            "amount": "1.00",
+            "currency": "USD",
+            "description": "Don \u00e0 Winner ASBL"
+        }
+    },
+    "headers": [
+        "Content-Type: application\/json",
+        "Authorization: Basic bWVyY2hhbnQuV0lOTkVSUjo1NWMwNzFlMmMxMzIyZGFkNDdmMjk3MDg5ODE0MzlmNQ=="
+    ]
+}
+----------------------------------------
+[2025-08-19 15:13:44] Mastercard API Response
+Data: {
+    "httpCode": 201,
+    "response": {
+        "merchant": "WINNERR",
+        "result": "SUCCESS",
+        "session": {
+            "id": "SESSION0002658220329L4517441K00",
+            "updateStatus": "SUCCESS",
+            "version": "d0a903e301"
+        },
+        "successIndicator": "93c55690553f4359"
+    }
+}
+----------------------------------------

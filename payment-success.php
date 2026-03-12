@@ -1,10 +1,13 @@
 <?php
 session_start();
 
-// Récupération des paramètres de l'URL
+// Récupération des paramètres de l'URL avec vérification
 $orderId = isset($_GET['orderid']) ? htmlspecialchars($_GET['orderid']) : '';
-$amount = isset($_GET['amount']) ? htmlspecialchars($_GET['amount']) : '';
+$amount = isset($_GET['amount']) ? floatval($_GET['amount']) : 0;
 $resultIndicator = isset($_GET['resultIndicator']) ? htmlspecialchars($_GET['resultIndicator']) : '';
+
+// Log du montant reçu pour debug
+error_log("Amount received: " . $amount);
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -145,7 +148,7 @@ $resultIndicator = isset($_GET['resultIndicator']) ? htmlspecialchars($_GET['res
                                 </div>
                                 <div class="transaction-item">
                                     <span>Montant du don</span>
-                                    <strong>$<?php echo number_format((float)$amount, 2, ',', ' '); ?> USD</strong>
+                                    <strong>$<?php echo number_format($amount, 2, ',', ' '); ?> USD</strong>
                                 </div>
                                 <div class="transaction-item">
                                     <span>Statut</span>

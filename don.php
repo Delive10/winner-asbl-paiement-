@@ -51,7 +51,7 @@ session_start();
     <div class="row gx-0">
         <div class="col-lg-3 bg-dark d-none d-lg-block">
             <a href="index.html" class="navbar-brand w-100 h-100 m-0 p-0 d-flex align-items-center justify-content-center">
-                <h1 class="m-0 text-primary  header-logo">Winner ASBL</h1>
+                <img src="img/winner.png"  alt="winner Logo" class="m-0" style="height: 80px; border-radius: 10px;">
             </a>
         </div>
         <div class="col-lg-9">
@@ -78,7 +78,7 @@ session_start();
             </div>
             <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                 <a href="index.html" class="navbar-brand d-block d-lg-none">
-                    <h1 class="m-0 text-primary  header-logo">Winner ASBL</h1>
+                     <img src="img/winner.png"  alt="winner Logo" class="m-0" style="height: 40px; border-radius: 10px;">
                 </a>
                 <button type="button" class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">
                     <span class="navbar-toggler-icon"></span>

@@ -13,7 +13,7 @@ function logPaymentError($message, $data = []) {
     
     // Créer le dossier logs s'il n'existe pas
     if (!is_dir(__DIR__ . '/logs')) {
-        mkdir(__DIR__ . '/logs', 0777, true);
+        mkdir(__DIR__ . '/logs', 0777, true); 
     }
     
     file_put_contents($logFile, $logMessage, FILE_APPEND);
@@ -23,9 +23,23 @@ function genRandomID($min = 2000000, $max = 8000000) {
     return rand($min, $max);
 }
 
-// Vérification que le montant a été posté
-if (!isset($_POST['don_montant']) || !is_numeric($_POST['don_montant']) || $_POST['don_montant'] <= 0) {
-    die("Montant invalide.");
+// Au début du fichier, après session_start()
+if (isset($_GET['action']) && $_GET['action'] === 'cancel') {
+    // Redirection en cas d'annulation
+    header('Location: don.php?status=cancelled');
+    exit;
+}
+
+// Modifier la vérification du montant
+if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+    if (!isset($_POST['don_montant']) || !is_numeric($_POST['don_montant']) || $_POST['don_montant'] <= 0) {
+        header('Location: don.php?error=invalid_amount');
+        exit;
+    }
+} else {
+    // Si ce n'est pas une requête POST, rediriger vers la page de don
+    header('Location: don.php');
+    exit;
 }
 
 $prenom = htmlspecialchars($_POST['prenom']);
@@ -35,8 +49,8 @@ $orderid = genRandomID();
 $merchant = "WINNERR";
 $apipassword = "55c071e2c1322dad47f29708981439f5";
 $currency = "USD";
-$returnUrl = "https://winnerasbl.org/payment-success.php"; // À adapter à ton domaine
-$returnUrl_annuler = "https://winnerasbl.org/don.php"; // À adapter à ton domaine
+$returnUrl = "http://" . $_SERVER['HTTP_HOST'] . "/payment-success.php?amount=" . $amount; // À adapter à ton domaine
+
 $sessionEndpoint = "https://ap-gateway.mastercard.com/api/rest/version/59/merchant/$merchant/session";
 
 // Création de la session
@@ -49,15 +63,29 @@ curl_setopt($ch, CURLOPT_SSL_VERIFYPEER, 2);
 
 $data = array(
     "apiOperation" => "CREATE_CHECKOUT_SESSION",
-    "interaction" => array (
+    "interaction" => array(
         "operation" => "PURCHASE",
-        "returnUrl" => $returnUrl
-     ),
-     "order" => array (
+        "returnUrl" => $returnUrl,
+        "merchant" => array(
+            "name" => "Winner ASBL",
+            "address" => array(
+                "line1" => "Kinshasa",
+                "line2" => "RDC"
+            )
+        ),
+        "displayControl" => array(
+            "billingAddress" => "HIDE",
+            "customerEmail" => "HIDE",
+            "orderSummary" => "SHOW",
+            "shipping" => "HIDE"
+        )
+    ),
+    "order" => array(
         "id" => $orderid,
         "amount" => $amount,
         "currency" => $currency,
-     )
+        "description" => "Don à Winner ASBL"
+    )
 );
 
 $jsonData = json_encode($data);
@@ -104,6 +132,11 @@ if (!$responseData || !isset($responseData->session->id)) {
 
 $sessionId = $responseData->session->id;
 $sessionVersion = $responseData->session->version;
+
+// Ajouter ces en-têtes AVANT toute sortie HTML
+header('Content-Security-Policy: default-src * data: blob: filesystem: about: ws: wss: \'unsafe-inline\' \'unsafe-eval\' \'unsafe-dynamic\'; frame-src * data: blob: \'unsafe-inline\' \'unsafe-eval\'; frame-ancestors \'none\';');
+header('X-Frame-Options: DENY');
+header('X-Content-Type-Options: nosniff');
 ?>
 <!DOCTYPE html>
 <html lang="fr">
@@ -158,7 +191,7 @@ $sessionVersion = $responseData->session->version;
                     </a>
                 </div>
                 <div class="col-lg-9">
-                    <div class="row gx-0 bg-white d-none d-lg-flex">
+                    <!-- <div class="row gx-0 bg-white d-none d-lg-flex">
                         <div class="col-lg-7 px-5 text-start">
                             <div class="h-100 d-inline-flex align-items-center py-2 me-4">
                                 <i class="fa fa-envelope text-primary me-2"></i>
@@ -178,7 +211,7 @@ $sessionVersion = $responseData->session->version;
                                 <a class="" href="#"><i class="fab fa-youtube"></i></a>
                             </div>
                         </div>
-                    </div>
+                    </div> -->
                     <nav class="navbar navbar-expand-lg bg-dark navbar-dark p-3 p-lg-0">
                         <a href="../index.php" class="navbar-brand d-block d-lg-none">
                             <h1 class="m-0 text-primary header-logo">Winner ASBL</h1>
@@ -215,7 +248,7 @@ $sessionVersion = $responseData->session->version;
                         </ol>
                     </nav>
                 </div>
-            </div> 
+            </div>
         </div>
 
         <!-- Payment Section -->
@@ -292,12 +325,12 @@ $sessionVersion = $responseData->session->version;
             });
             
             alert("Erreur de paiement : " + error.explanation);
-            window.location = "<?php echo $returnUrl_annuler; ?>";
+            window.location = "don.php";
         }
 
-        function cancelCallback(){
-            alert("Paiement annulé.");
-            window.location = "<?php echo $returnUrl_annuler; ?>";
+        function cancelCallback() {
+            // Redirection vers la page d'annulation dédiée
+            window.location = "cancel.php";
         }
 
         Checkout.configure({
@@ -305,7 +338,14 @@ $sessionVersion = $responseData->session->version;
                 id: '<?php echo $sessionId; ?>',
                 version: '<?php echo $sessionVersion; ?>'
             },
+            order: {
+                amount: <?php echo $amount; ?>,
+                currency: '<?php echo $currency; ?>',
+                description: 'Don à Winner ASBL',
+                id: '<?php echo $orderid; ?>'
+            },
             interaction: {
+                operation: 'PURCHASE',
                 merchant: {
                     name: 'Winner ASBL',
                     address: {
@@ -321,6 +361,7 @@ $sessionVersion = $responseData->session->version;
                 },
                 locale: 'fr_FR',
                 theme: 'default'
+                // Supprimé returnUrl d'ici car il est déjà défini dans la requête API
             }
         });
 
@@ -339,3 +380,5 @@ $sessionVersion = $responseData->session->version;
     </script>
 </body>
 </html>
+</html>
+
